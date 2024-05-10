@@ -40,6 +40,8 @@ WORKDIR /app
 RUN \
   apk --no-cache add \
     lmdb \
+    curl \
+    wireguard-tools \
     flatbuffers \
     libsecp256k1 \
     libb2 \
