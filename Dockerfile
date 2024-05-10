@@ -51,7 +51,8 @@ RUN \
 
 COPY --from=build /build/strfry strfry
 
+COPY start.sh /start.sh
+
 EXPOSE 7777
 
-ENTRYPOINT ["/app/strfry"]
-CMD ["relay"]
+ENTRYPOINT ["/bin/sh", "/start.sh"]
