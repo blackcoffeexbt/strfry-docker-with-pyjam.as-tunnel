@@ -1,5 +1,18 @@
 # strfry - a nostr relay
 
+## BCs work
+I've added a docker-compose file that gives wireguard NET_ADMIN capabilities. Also added wireguard and curl to the docker file.
+
+After running the docker container with:
+
+docker compose up --build
+
+you can exec to ssh and run this command to get a public URL for your relay
+
+curl https://tunnel.pyjam.as/8080 > tunnel.conf && wg-quick up ./tunnel.conf
+
+See https://tunnel.pyjam.as/ for more detail
+
 ![strfry logo](docs/strfry.svg)
 
 strfry is a relay for the [nostr protocol](https://github.com/nostr-protocol/nostr)
